@@ -242,6 +242,12 @@ footer {
         display: block;
         width: 100%;
     }
+
+    .mw-230 {
+        width: 232px;
+        margin-bottom: 20px;
+        margin-right: unset!important;
+    }
 }
 
 @keyframes fadeIn {
