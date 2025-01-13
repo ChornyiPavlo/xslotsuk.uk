@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
-    <title>XSlotsUk.uk - Premier UK Online Casino Guide</title>
+    <title>nllegalcasino.com - Premier UK Online Casino Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-<div class="cookie-notice" id="cookieNotice">
+<div class="cookie-notice show" id="cookieNotice">
     <p class="my-0 my-md-2"><span class="d-none d-md-inline">We use cookies to enhance your browsing experience.</span>
         By continuing to use site, you agree to our use of cookies.</p>
     <button onclick="acceptCookies()">Accept</button>
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.jpg" alt="XSlotsUk.uk" width="150" height="50">
+                <img src="img/logo.jpg" alt="nllegalcasino.com" width="150" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -604,7 +604,7 @@
                         Licence holder  - <b>VIPERMASS LTD</b> <br>
                         Company Number  - <b>14504377</b> <br>
                         Registered address  - <b>6-8 GREENCOAT PLACE LONDON ENGLAND SW1P 1PL</b> <br>
-                        Website(Domain)   - <b>www.namesite.com</b> <br>
+                        Website(Domain)   - <b>www.nllegalcasino.com</b> <br>
                         Prescribed permission activities  - <b>Video Slots, Poker, Roulette</b> <br>
                     </div>
                 </div>
@@ -617,7 +617,7 @@
     <div class="container pb-4">
         <div class="row">
             <div class="col-md-4 mb-3">
-                <h5>XSlotsUk.uk</h5>
+                <h5>nllegalcasino.com</h5>
                 <p>Your reliable resource for UK online casinos, offering professional reviews, unique bonuses, and advocating responsible gambling practices.</p>
             </div>
             <div class="col-md-4 mb-3">
@@ -630,14 +630,13 @@
             </div>
             <div class="col-md-4 mb-3">
                 <h5>Contact Us</h5>
-                <p>Email: <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
-                             data-cfemail="15666065657a6761556d66797a6166607e3b607e">[email&#160;protected]</a></p>
+                <p>Email: support@nllegalcasino.com</p>
             </div>
         </div>
         <hr>
         <div class="row align-items-center">
             <div class="col-md-6">
-                <p class="mb-0">&copy; 2023 XSlotsUk.uk. All rights reserved. 18+ Gamble Responsibly.</p>
+                <p class="mb-0">&copy; 2025 nllegalcasino.com. All rights reserved. 18+ Gamble Responsibly.</p>
             </div>
             <div class="col-md-6 text-md-end">
                 <a href="https://www.begambleaware.org/" target="_blank" class="me-3">
@@ -715,15 +714,16 @@
 <script>
     for (let a of [...document.querySelectorAll('a')])
         a.href += (a.href.includes("?") ? "&" : "?") + document.location.search.substr(1);
-
     window.onload = function () {
-        setTimeout(function () {
-            document.getElementById('cookieNotice').classList.add('show');
-        }, 1000);
+        if (!localStorage.getItem('acceptCookies')) {
+            setTimeout(function () {
+                document.getElementById('cookieNotice').classList.remove('show');
+            }, 1000);
+        }
     }
-
     function acceptCookies() {
-        document.getElementById('cookieNotice').classList.remove('show');
+        document.getElementById('cookieNotice').classList.add('show');
+        localStorage.setItem('acceptCookies', 'true');
     }
 </script>
 </body>
